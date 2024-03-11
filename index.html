@@ -1,51 +1,92 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-Br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Assets/CSS/style.css">
+    <link rel="stylesheet" href="./Assets/CSS/media.css">
+    <link rel="shortcut icon" type="image/jpg" href="./Assets/img/icons8-s-50.png">    
+    <title>Cadastro SummerFit</title>
 </head>
 <body>
-    <main>
-        <h1> Formulário de Cadastro</h1>
-     <form action="" class="formulario" id="formularioid">
-        <div class="inputs" id="inputs">
-            <label for="">Nome Completo</label>
-             <input type="text" id="nome"  placeholder="Nome Completo"  required=""  >
-             <label for="">Data de Nascimento </label>
-             <input type="date" id="nascimento"  placeholder="dd/mm/aaaa"  required="">
-             <label for="number" > CPF</label>
-             <input type="number" id="cpf"   placeholder="CPF"  required="">
-             <label for="email">Email</label>
-             <input type="email" id="email"   placeholder="Email"  required="">
-             <label for="Telefone">Telefone</label>
-             <input type="number" id="telefone" placeholder="Telefone"  required="">
-             <label for="sexo">Sexo</label>
+    <div class="conteiner">
+
+    
+        <div class="form-imagem"  >
+            <img src="./Assets/img/undraw_personal_training_0dqn.svg" alt="Academia">
         </div>
+        <div class="form">
+            <form method="POST" id="form">
+                <div class="form-cabeçalho">
+                    <div class="titulo">
+                        <h1>Cadastro SummerFit</h1>
+                    </div>
+                </div>
+                <div class="inputs">
+                    <div class="input-box">
+                        <label for="primeiro_nome">Nome</label>
+                        <input type="text" name="nome" id="primeiro_nome" name="primeiro_nome" placeholder="Digite seu primeiro nome" required>
+                    </div>
+                    
 
-             <select id="sexo" name="sexo" required="">
-                <option value="" selected="" disabled="">
-                    .: Selecione :. 
-                </option>
-                <option value="M">
-                        Masculino
-                    </option>
-                 <option value="F">
-                        Feminino
-                    </option>
-                    <option value="N">
-                        Não-binário
-                    </option>
-            </select>
-               <button id="button">Enviar</button>
-             
+                    <div class="input-box">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text"  id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required>
+                    </div>
 
-     </form>
-     <ul id="lista-dados"></ul>
-    </main>
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email"  id="email" name="email" placeholder="Digite seu email" required>
+                    </div>
 
-    <script src="script.js"></script>
+                    <div class="input-box">
+                        <label for="number">Telefone</label>
+                        <input type="tel"  id="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+               </div>
+
+                <div class="genero-inputs">
+                     <div class="titulo-genero">
+                         <h6>Gênero</h6>
+                     </div>
+
+                     <div class="genero-grupo">
+                         <div class="genero-input">
+                             <input type="radio" id="masculino" name="genero" value="masculino">
+                             <label for="masculino">Masculino</label>
+                         </div>
+
+                         <div class="genero-input">
+                             <input type="radio" id="feminino" name="genero" value="feminino">
+                             <label for="feminino">Feminino</label>
+                         </div>
+
+                         <div class="genero-input">
+                             <input type="radio" id="outros" name="genero" value="outros">
+                             <label for="outros">Outros</label>
+                         </div>
+
+                         <div class="genero-input">
+                             <input type="radio" id="nenhum" name="genero" value="nenhum">
+                             <label for="nenhum">Prefiro não dizer</label>
+                         </div>
+                     </div>
+                 </div>
+            
+                 <div class="continuar-botao">
+                    <button type="submit" ><a href="">Continuar</a></button>
+                 </div>
+
+                 <div class="alunos">
+                    <ul id="lista-cadastrados">
+
+                        <li>oii eemplo</li>
+                    </ul>
+                </div>
+          </form>
+        </div>
+    </div>
+    
+    <script src="./Assets/Java Script/script.js/script.js" defer></script>
 </body>
 </html>
